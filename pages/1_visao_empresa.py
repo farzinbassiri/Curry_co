@@ -125,9 +125,10 @@ with tab3:
     st.markdown('# Pontos Centrais das Entregas')
     mapa = grafico_country_map(df1)
 
-    max_width= get_monitors()[0].width * 0.7
-    max_height= get_monitors()[0].height * 0.7
-    
+#    max_width= get_monitors()[0].width * 0.7
+#    max_height= get_monitors()[0].height * 0.7
+    max_width = 1980 * 0.7
+    max_height = 1080 * 0.7    
     folium_static(mapa, width = max_width, height = max_height)
 
     
