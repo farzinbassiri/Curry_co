@@ -122,8 +122,8 @@ def grafico_order_date(df1):
     # detecta a resolução do monitor para definir o tamanho do gráfico
     #max_width= get_monitors()[0].width
     #max_height= get_monitors()[0].height
-    max_width = st.screen_width
-    max_height = st.screen_height
+    max_width = st.get_container_width
+    max_height = st.get_container_height
     
     df_aux = df1.loc[:, cols].groupby(group_by_col).count().reset_index()
     # altera o nome da coluna ID
@@ -338,8 +338,8 @@ def grafico_weekly_order(df1):
     # detecta a resolução do monitor para definir o tamanho do gráfico
 #    max_width= get_monitors()[0].width
 #    max_height= get_monitors()[0].height
-    max_width = st.screen_width
-    max_height = st.screen_height    
+    max_width = st.get_container_width
+    max_height = st.get_container_height 
     
     df_aux = df1.loc[:, cols].groupby(group_by_col).count().reset_index()
     # altera o nome da coluna ID
