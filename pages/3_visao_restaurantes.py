@@ -12,7 +12,7 @@ st.set_page_config(page_title= 'Visão Restaurantes', layout='wide')
 # lendo o arquivo importado
 
 # lendo o arquivo com os dados a serem importados
-df = pd.read_csv('Dataset\\train.csv')
+df = pd.read_csv('..\\Dataset\\train.csv')
 
 # importa o módulo de tratamento dos dados
 # esse módulo é formado por um conjunto de funções que fazem a limpeza dos dados
