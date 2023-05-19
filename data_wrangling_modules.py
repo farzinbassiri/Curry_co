@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
-from screeninfo import get_monitors
+#from screeninfo import get_monitors
 import folium
 from haversine import haversine
 import numpy as np
@@ -120,9 +120,10 @@ def grafico_order_date(df1):
     graph_label = 'Quantidade de Entregas Realizadas'
     
     # detecta a resolução do monitor para definir o tamanho do gráfico
-    max_width= get_monitors()[0].width
-    max_height= get_monitors()[0].height
-    
+    #max_width= get_monitors()[0].width
+    #max_height= get_monitors()[0].height
+    max_width = st.screen_width
+    max_height = st.screen_height
     
     df_aux = df1.loc[:, cols].groupby(group_by_col).count().reset_index()
     # altera o nome da coluna ID
@@ -335,9 +336,10 @@ def grafico_weekly_order(df1):
 
     
     # detecta a resolução do monitor para definir o tamanho do gráfico
-    max_width= get_monitors()[0].width
-    max_height= get_monitors()[0].height
-    
+#    max_width= get_monitors()[0].width
+#    max_height= get_monitors()[0].height
+    max_width = st.screen_width
+    max_height = st.screen_height    
     
     df_aux = df1.loc[:, cols].groupby(group_by_col).count().reset_index()
     # altera o nome da coluna ID
