@@ -170,10 +170,10 @@ with tab1:
 with tab2:
     col1, col2 = st.columns(2, gap='large')
     with col1:
-        fig = grafico_entregas(df1, True, 'Time_taken(min)', 'Tempo de Entrega [min]', '% de ocorrências', 'Tempo de Entrega')
+        fig = grafico_entregas(df1, True, 'Time_taken(min)', 'Tempo de Entrega [min]', 'Frequência Relativa', 'Tempo de Entrega')
         st.plotly_chart(fig, use_container_width = True)  
     with col2:
-        fig = grafico_entregas(df1, False, 'Time_taken(min)', 'Tempo de Entrega [min]', '% de ocorrências', 'Tempo de Entrega')
+        fig = grafico_entregas(df1, False, 'Time_taken(min)', 'Tempo de Entrega [min]', 'Frequência Relativa', 'Tempo de Entrega')
         st.plotly_chart(fig, use_container_width = True)  
         
         
